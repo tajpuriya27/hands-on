@@ -5,4 +5,5 @@ services:
     ports:
       - '5432:5432'
     environment:
-      postgres_password: admin123
+      POSTGRES_PASSWORD: admin123
+      POSTGRES_DB: ilovecoffee
