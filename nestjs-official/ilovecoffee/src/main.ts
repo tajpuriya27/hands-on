@@ -7,7 +7,12 @@ async function bootstrap() {
 
   // This will now use the dtos using class-validator package and class-transformer package
   // for validation
-  app.useGlobalPipes(new ValidationPipe());
+  app.useGlobalPipes(
+    new ValidationPipe({
+      whitelist: true,
+      forbidNonWhitelisted: true,
+    }),
+  );
   await app.listen(process.env.PORT ?? 3000);
 }
 bootstrap();
