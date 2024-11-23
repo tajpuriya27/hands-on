@@ -29,12 +29,17 @@ export class CoffeeController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.coffeeSerivce.findOne(id);
+  findOne(@Param('id') id: number) {
+    console.log('when transform is true:', typeof id);
+    return this.coffeeSerivce.findOne('' + id);
   }
 
   @Post()
   createOne(@Body() createCoffeedto: CreateCoffeeDto) {
+    console.log(
+      'when transform is false in validation pipe',
+      createCoffeedto instanceof CreateCoffeeDto,
+    );
     return this.coffeeSerivce.create(createCoffeedto);
   }
 
