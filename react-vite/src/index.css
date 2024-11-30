@@ -1,3 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-100: 192 73.8% 88%;
+    --primary-200: 198.4 54.8% 59.2%;
+    --primary-300: 205.3 83.3% 21.2%;
+    --primary-400: 212.2 89.3% 14.7%;
+    --primary-500: 219.1 95.8% 9.4%;
+    --secondary-100: 37.7 95.6% 91.2%;
+    --secondary-200: 30 91.2% 73.3%;
+    --secondary-300: 23.1 83% 53.9%;
+    --secondary-400: 15.7 78.8% 37.1%;
+    --secondary-500: 8.6 88.2% 23.3%;
+    --grayScale-100: 0 0% 94.9%;
+    --grayScale-200: 0 0% 85.1%;
+    --grayScale-300: 0 0% 75.3%;
+    --grayScale-400: 0 0% 50.2%;
+    --grayScale-500: 0 0% 25.1%;
+  }
+}
+/* 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -65,4 +89,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
