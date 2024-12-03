@@ -1,0 +1,28 @@
+services:
+  db:
+    image: postgres:16
+    restart: always
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: adonis_test
+    volumes:
+      - adonis_test_data:/var/lib/postgresql/data
+
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - '1025:1025'
+      - '8025:8025'
+    restart: always
+
+  admin:
+    image: adminer
+    restart: always
+    ports:
+      - 9999:8080
+
+volumes:
+  grievance_data:
+    driver: local
