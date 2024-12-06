@@ -7,8 +7,6 @@ services:
     environment:
       POSTGRES_PASSWORD: password
       POSTGRES_DB: adonis_test
-    volumes:
-      - adonis_test_data:/var/lib/postgresql/data
 
   mailhog:
     image: mailhog/mailhog
