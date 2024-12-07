@@ -1,9 +1,8 @@
 import Test from "./components/Test";
-
 function App() {
   return (
     <>
-      <h1 className="bg-blue-500 text-9xl">Testing text</h1>
+      <h1 className="text-9xl bg-black">Testing text</h1>
       <Test />
       <p>App Component</p>
     </>
